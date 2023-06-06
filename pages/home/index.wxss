@@ -1,0 +1,14 @@
+/* pages/home/index.wxss */
+.dot{
+  --c:#fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(70%,-80%);
+  font-size: xx-small;
+  width: 4.5em;
+  text-align: center;
+  color: var(--c);
+  border-radius: var(--md) var(--md) var(--md) 0;
+  background: var(--primary-color);
+}

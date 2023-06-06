@@ -1,0 +1,11 @@
+<!--pages/home/index.wxml-->
+<view class="p-md flex justify-between">
+  <view>
+    <van-icon name="search" />
+  </view>
+  <view class="c-secondary relative mr-md">
+    <van-icon name="bag-o" />
+    <text>全职/校招</text>
+    <text class="dot">1-3年</text>
+  </view>
+</view>
