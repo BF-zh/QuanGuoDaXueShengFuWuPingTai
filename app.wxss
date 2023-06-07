@@ -1,8 +1,8 @@
 page {
   --primary-color: #5ac387;
-  --secondary-color:#656667;
-  --link-color:#4c86e3;
-  --xs:3.25px;
+  --secondary-color: #999999;
+  --link-color: #4c86e3;
+  --xs: 3.25px;
   --md: 15px;
   --sm: 7.5px;
   --xl: 20px;
@@ -10,21 +10,32 @@ page {
   padding-bottom: 30px;
   background-color: #f4f6f7;
 }
-.text-sm{
+view{
+  box-sizing: border-box;
+}
+.text-xs{
+  font-size: x-small;
+}
+.text-sm {
   font-size: small;
 }
-.text-md{
+
+.text-md {
   font-size: medium;
 }
-.text-l{
+
+.text-l {
   font-size: large;
 }
-.text-xl{
+
+.text-xl {
   font-size: x-large;
 }
-.text-2xl{
+
+.text-2xl {
   font-size: xx-large;
 }
+
 .c-white {
   color: white;
 }
@@ -93,6 +104,7 @@ page {
 .pb-xs {
   padding-bottom: var(--xs);
 }
+
 .p-sm {
   padding: var(--sm);
 }
@@ -358,6 +370,9 @@ page {
 .grid.column-3 {
   grid-template-columns: repeat(3, 1fr)
 }
+.grid.column-4 {
+  grid-template-columns: repeat(4, 1fr)
+}
 
 .flex {
   display: flex;
@@ -383,29 +398,35 @@ page {
   flex: 1;
 }
 
-.gap-m {
+.gap-md {
   gap: var(--md);
 }
 
 .gap-sm {
   gap: 7px;
 }
+
 .gap-xs {
   gap: 4px;
 }
+
 .items-center {
   align-items: center;
 }
-.items-end{
+
+.items-end {
   align-items: flex-end;
 }
-.items-start{
+
+.items-start {
   align-items: flex-start;
 }
-.items-stretch{
+
+.items-stretch {
   align-items: stretch;
 }
-.items-baseline{
+
+.items-baseline {
   align-items: baseline;
 }
 
@@ -421,6 +442,7 @@ page {
 .justify-between {
   justify-content: space-between;
 }
+
 .justify-evenly {
   justify-content: space-evenly;
 }
@@ -444,60 +466,67 @@ page {
 .sticky {
   position: sticky;
 }
-.float-left{
+
+.float-left {
   float: left;
 }
-.float-right{
+
+.float-right {
   float: right;
 }
-.c-primary{
+
+.c-primary {
   color: var(--primary-color);
 }
-.c-secondary{
+
+.c-secondary {
   color: var(--secondary-color);
 }
-.c-link{
+
+.c-link {
   color: var(--link-color);
 }
-.ellipsis{
-  --w:5em;
+
+.ellipsis {
+  --w: 5em;
   max-width: var(--w);
   text-overflow: ellipsis;
-  overflow:hidden;
-  white-space:nowrap;
+  overflow: hidden;
+  white-space: nowrap;
 }
-.w-full{
+
+.w-full {
   width: 100%;
 }
-.h-full{
+
+.h-full {
   height: 100%;
 }
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
 /* 其他样式 */
 .cell-group {
   margin-top: var(--md) !important;
 }
-.grid-warp{
+
+.bg-white {
   background-color: #fff !important;
 }
-.navigation{
+.bg-primary{
   background-color: var(--primary-color);
-}
-.tab-class{
-  flex:unset !important;
-}
-.common-bg{
-  --bg:var(--primary-color);
-  --bg1:#fcf9f1;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: linear-gradient(to bottom,var(--bg),var(--bg1));
-}
-.van-tabs__line{
-  background: var(--primary-color) !important;
-}
-.grid-item{
-  height: 2em;
-  max-width: 5em;
 }

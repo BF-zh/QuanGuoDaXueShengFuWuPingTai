@@ -1,11 +1,115 @@
 <!--pages/home/index.wxml-->
-<view class="p-md flex justify-between">
-  <view>
-    <van-icon name="search" />
+<view class="p-md bg-white flex justify-between items-center">
+  <view class="search-box px-md py-sm flex gap-sm radius-full">
+    <van-icon size="1.3em" name="search" />
+    <text>搜索需要的实习岗位/企业</text>
   </view>
   <view class="c-secondary relative mr-md">
     <van-icon name="bag-o" />
     <text>全职/校招</text>
     <text class="dot">1-3年</text>
+  </view>
+</view>
+<view class="bg-white px-md pb-md">
+  <swiper indicator-dots autoplay circular class="radius-md overflow-hidden">
+    <swiper-item>
+      <image class="w-full h-full" src="/static/index-banner-1.png" />
+    </swiper-item>
+    <swiper-item>
+      <image class="w-full h-full" src="/static/index-banner-2.png" />
+    </swiper-item>
+  </swiper>
+</view>
+<van-grid border="{{false}}">
+  <van-grid-item use-slot>
+    <van-icon size="2.5em" name="/static/gqzc.png" />
+    <text class="text-sm">国企专场</text>
+  </van-grid-item>
+  <van-grid-item use-slot>
+    <van-icon size="2.5em" name="/static/dzjg.png" />
+    <text class="text-sm">党政机关</text>
+  </van-grid-item>
+  <van-grid-item use-slot>
+    <van-icon size="2.5em" name="/static/sjzt.png" />
+    <text class="text-sm">省级专题</text>
+  </van-grid-item>
+  <van-grid-item use-slot>
+    <van-icon size="2.5em" name="/static/hyzc.png" />
+    <text class="text-sm">行业专场</text>
+  </van-grid-item>
+</van-grid>
+<view style="height: 150rpx;" class="px-md pb-sm grid column-2 gap-md bg-white">
+  <image class="w-full h-full radius-sm" src="/static/yqsx.png" />
+  <image class="w-full h-full radius-sm" src="/static/zqhysx.png" />
+</view>
+<view style="height: 50px;" class="relative bg-white text-sm mt-md c-primary flex justify-between px-md">
+  <image class="w-full h-full live-bg" mode="heightFix" src="/static/xdzbj.png" />
+  <van-icon name="/static/play.gif" />
+  <view class="flex items-center">
+    <text>查看更多</text>
+    <van-icon name="arrow" />
+  </view>
+</view>
+<swiper style="height:200rpx;" previous-margin="20rpx" next-margin="120rpx">
+  <swiper-item wx:for="{{liveRoomList}}" wx:key="index" class="pr-md">
+    <view class="flex gap-sm p-md bg-white w-full h-full radius-sm">
+      <van-image radius="var(--xs)" fit="cover" width="200rpx" height="100%" src="{{item.src}}" />
+      <view class="flex flex-1 column justify-between">
+        <text>{{item.title}}</text>
+        <view class="flex items-center justify-between">
+          <text class="c-secondary text-xs">{{item.count}}人感兴趣</text>
+          <view class="px-md py-xs text-sm c-white bg-primary radius-full">直播回放</view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>
+
+<view class="p-md mt-md bg-white">
+  <view style="font-weight: 500;" class="flex items-center justify-between text-l">
+    <text>求职意向</text>
+    <view class="c-secondary text-sm">
+      <text>10秒定制意向职位</text>
+      <van-icon name="arrow" />
+    </view>
+  </view>
+  <view class="py-md c-secondary">
+    <view class="flex justify-between">
+      <view class="flex gap-md">
+        <text wx:for="{{tabs.tab}}" class="tab {{tabs.activeId===item.id?'active':''}}">{{item.title}}</text>
+      </view>
+      <view class="flex gap-md items-center">
+        <view class="flex items-center gap-xs">
+          <text>成都</text>
+          <view class="triangle" />
+        </view>
+        <view class="flex items-center gap-xs">
+          <text>筛选</text>
+          <view class="triangle" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="flex column gap-sm">
+    <view class="flex justify-between">
+      <text style="font-weight: 500;">地铁安检实习生</text>
+      <text class="c-primary">100元一下/天</text>
+    </view>
+    <view class="flex gap-md">
+      <van-tag color="rgba(0,0,0,.2)" text-color="#000">交通补助</van-tag>
+    </view>
+    <view>
+      <text style="color: #737373;">昇鸣轨道 民营企业 50人以下</text>
+    </view>
+    <view>
+      <text class="text-xs c-secondary">职位来源：易展翅</text>
+    </view>
+    <view class="flex justify-between">
+      <view class="flex items-center gap-sm">
+        <van-image round width="1.5em" height="1.5em" fit="contain" src="/static/tx.png" />
+        <text class="text-xs c-secondary">孙先生·主管</text>
+      </view>
+      <text class="text-xs c-secondary">武侯区</text>
+    </view>
   </view>
 </view>
