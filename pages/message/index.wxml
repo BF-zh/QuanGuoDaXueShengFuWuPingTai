@@ -1,2 +1,18 @@
 <!--pages/message/index.wxml-->
-<text>pages/message/index.wxml</text>
+ <view class="p-xl text-sm bg-white grid column-3">
+   <view wx:for="{{girdList}}" wx:key="index" data-item="{{item}}" bindtap="handleClickItem" class="flex column items-center">
+     <van-icon size="5rem" name="{{item.icon}}" />
+     <text>{{item.title}}</text>
+   </view>
+ </view>
+ <view style="height: calc(100vh - 200px);" class="mt-md bg-white">
+  <view class="flex c-secondary justify-between align-center pb-md bb-1 solid p-md">
+    <view class="flex gap-md items-center">
+        <text wx:for="{{tabs.tab}}" data-item="{{item}}" bindtap="handleTabChange" wx:key="index" class="tab {{tabs.activeId===item.id?'active':''}}">{{item.title}}</text>
+    </view>
+    <text class="text-sm">全部已读</text>
+  </view>
+  <view class="px-md pb-md" wx:for="{{tabs.tab}}" wx:key="index" wx:if="{{tabs.activeId===item.id}}">
+    <van-empty image="/static/empty.png" description="没有更多职位了" />
+  </view>
+ </view>

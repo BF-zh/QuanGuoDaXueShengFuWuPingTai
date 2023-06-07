@@ -57,14 +57,13 @@
       <view class="flex flex-1 column justify-between">
         <text>{{item.title}}</text>
         <view class="flex items-center justify-between">
-          <text class="c-secondary text-xs">{{item.count}}人感兴趣</text>
+          <text style="--w:8em" class="c-secondary text-xs ellipsis">{{item.count}}人感兴趣</text>
           <view class="px-md py-xs text-sm c-white bg-primary radius-full">直播回放</view>
         </view>
       </view>
     </view>
   </swiper-item>
 </swiper>
-
 <view class="p-md mt-md bg-white">
   <view style="font-weight: 500;" class="flex items-center justify-between text-l">
     <text>求职意向</text>
@@ -75,9 +74,9 @@
   </view>
   <view class="py-md c-secondary">
     <view class="flex justify-between">
-      <view class="flex gap-md">
-        <text wx:for="{{tabs.tab}}" class="tab {{tabs.activeId===item.id?'active':''}}">{{item.title}}</text>
-      </view>
+      <view class="flex gap-md items-center">
+        <text wx:for="{{tabs.tab}}" data-item="{{item}}" bindtap="handleTabChange" wx:key="index" class="tab {{tabs.activeId===item.id?'active':''}}">{{item.title}}</text>
+    </view>
       <view class="flex gap-md items-center">
         <view class="flex items-center gap-xs">
           <text>成都</text>

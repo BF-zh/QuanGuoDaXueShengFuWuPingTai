@@ -124,5 +124,9 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  handleTabChange({currentTarget}){
+    const {item} = currentTarget.dataset
+    this.setData({"tabs.activeId":item.id})
   }
 })

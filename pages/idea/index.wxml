@@ -1,0 +1,37 @@
+<!--pages/idea/index.wxml-->
+<view class="m-md flex justify-between items-center">
+  <text style="font-weight: 500;" class="text-xl">想找什么工作？</text>
+  <view>
+    <text class="c-primary">0</text>
+    <text>/3</text>
+  </view>
+</view>
+<view class="px-md text-sm c-secondary pb-md">
+  <text>添加多个求职期望，可获得更多精准职位推荐</text>
+</view>
+<view style="--border-color:var(--primary-color)" class="m-md flex py-2xl gap-sm justify-center b-1 dashed">
+  <view style="width: 1.3em; height: 1.3em;" class="c-white bg-primary flex justify-center items-center radius-full">
+    <van-icon name="plus" />
+  </view>
+  <text class="c-primary">添加求职意向</text>
+</view>
+
+<view class="p-md flex justify-between">
+  <text style="font-weight: 500;" class="text-l">求职状态</text>
+  <view class="c-secondary flex gap-sm items-center">
+    <text>null</text>
+    <van-icon name="arrow"/>
+  </view>
+</view>
+<view class="p-md flex justify-between">
+  <text style="font-weight: 500;" class="text-l">到岗时间</text>
+  <view class="c-secondary flex gap-sm items-center">
+    <text>请选择</text>
+    <van-icon name="arrow"/>
+  </view>
+</view>
+
+
+<view style="bottom: 50rpx;" bindtap="handleBack" class="p-md fixed w-full">
+  <van-button text-color="red" color="var(--primary-color)" block round>返回</van-button>
+</view>

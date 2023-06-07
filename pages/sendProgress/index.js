@@ -1,4 +1,4 @@
-// pages/message/index.js
+// pages/sendProgress/index.js
 Page({
 
   /**
@@ -13,32 +13,23 @@ Page({
           id:0
         },
         {
-          title:"我发起",
+          title:"被查看",
           id:1
         },
         {
-          title:"对方发起",
+          title:"邀面试",
           id:2
-        }
+        },
+        {
+          title:"不合格",
+          id:3
+        },
+        {
+          title:"录用",
+          id:4
+        },
       ]
     },
-    girdList:[
-      {
-        title:"投递进度",
-        icon:"/static/tdjd.png",
-        url:"/pages/sendProgress/index"
-      },
-      {
-        title:"企业邀约",
-        icon:"/static/qyyy.png",
-        url:""
-      },
-      {
-        title:"系统消息",
-        icon:"/static/xtxx.png",
-        url:""
-      },
-    ]
   },
 
   /**
@@ -100,15 +91,4 @@ Page({
     const {item} = currentTarget.dataset
     this.setData({"tabs.activeId":item.id})
   },
-  handleClickItem({currentTarget}){
-    const {item} = currentTarget.dataset
-    if(item.url){
-      wx.navigateTo({
-        url: item.url,
-        fail(){
-          
-        }
-    })
-    }
-  }
 })

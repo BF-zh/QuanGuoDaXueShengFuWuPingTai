@@ -1,6 +1,7 @@
 page {
   --primary-color: #5ac387;
   --secondary-color: #999999;
+  --border-color:#f3f3f3;
   --link-color: #4c86e3;
   --xs: 3.25px;
   --md: 15px;
@@ -446,6 +447,12 @@ view{
 .justify-evenly {
   justify-content: space-evenly;
 }
+.justify-end{
+  justify-content: flex-end;
+}
+.justify-start{
+  justify-content: flex-start;
+}
 
 .relative {
   position: relative;
@@ -518,6 +525,120 @@ view{
 .overflow-visible {
   overflow: visible;
 }
+.b-1{
+  border-width: 1px;
+  border-color: var(--border-color);
+
+}
+.bb-1{
+  border-bottom-width: 1px;
+  border-bottom-color: var(--border-color);
+}
+.br-1{
+  border-right-width: 1px;
+  border-right-color: var(--border-color);
+}
+.bt-1{
+  border-top-width: 1px;
+  border-top-color: var(--border-color);
+}
+.bl-1{
+  border-left-width: 1px;
+  border-left-color: var(--border-color);
+}
+.b-1.solid{
+  border-style:solid;
+}
+.b-1.dashed{
+  border-style:dashed;
+}
+.b-1.dotted{
+  border-style:dotted;
+}
+.b-1.double{
+  border-style:double;
+}
+.b-1.groove{
+  border-style:groove;
+}
+.b-1.hidden{
+  border-style:hidden;
+}
+
+
+.bl-1.solid{
+  border-left-style:solid;
+}
+.bl-1.dashed{
+  border-left-style:dashed;
+}
+.bl-1.dotted{
+  border-left-style:dotted;
+}
+.bl-1.double{
+  border-left-style:double;
+}
+.bl-1.groove{
+  border-left-style:groove;
+}
+.bl-1.hidden{
+  border-left-style:hidden;
+}
+.br-1.solid{
+  border-right-style:solid;
+}
+.br-1.dashed{
+  border-right-style:dashed;
+}
+.br-1.dotted{
+  border-right-style:dotted;
+}
+.br-1.double{
+  border-right-style:double;
+}
+.br-1.groove{
+  border-right-style:groove;
+}
+.br-1.hidden{
+  border-right-style:hidden;
+}
+
+.bt-1.solid{
+  border-top-style:solid;
+}
+.bt-1.dashed{
+  border-top-style:dashed;
+}
+.bt-1.dotted{
+  border-top-style:dotted;
+}
+.bt-1.double{
+  border-top-style:double;
+}
+.bt-1.groove{
+  border-top-style:groove;
+}
+.bt-1.hidden{
+  border-top-style:hidden;
+}
+.bb-1.solid{
+  border-bottom-style:solid;
+}
+.bb-1.dashed{
+  border-bottom-style:dashed;
+}
+.bb-1.dotted{
+  border-bottom-style:dotted;
+}
+.bb-1.double{
+  border-bottom-style:double;
+}
+.bb-1.groove{
+  border-bottom-style:groove;
+}
+.bb-1.hidden{
+  border-bottom-style:hidden;
+}
 
 /* 其他样式 */
 .cell-group {
@@ -528,5 +649,24 @@ view{
   background-color: #fff !important;
 }
 .bg-primary{
+  background-color: var(--primary-color);
+}
+.tab.active{
+  --line-width:1em;
+  --line-height:4px;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+  color: #000;
+}
+.tab.active::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%,100%);
+  width: var(--line-width);
+  height: var(--line-height);
+  border-radius: var(--line-height);
   background-color: var(--primary-color);
 }

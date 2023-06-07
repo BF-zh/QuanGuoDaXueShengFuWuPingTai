@@ -1,2 +1,43 @@
 <!--pages/mine/index.wxml-->
-<text>pages/mine/index.wxml</text>
+<view class="bg" />
+<view class="mx-md mt-2xl c-white flex items-center gap-md">
+  <view class="relative radius-full">
+    <van-image round width="5em" height="5em" src="/static/empty.png" />
+  </view>
+  <view class="flex column justify-center flex-1">
+    <text style="font-weight: 500;" class="text-xl">未知</text>
+    <view class="flex gap-sm items-center justify-end">
+      <text>编辑</text>
+      <van-icon name="arrow" />
+    </view>
+    <view class="flex items-center gap-sm">
+      <text>在线简历</text>
+      <text class="progress">完善度5%</text>
+    </view>
+  </view>
+</view>
+<view class="m-md c-secondary bg-white text-sm radius-md grid column-4 p-md">
+ <view class="flex gap-sm column align-center items-center">
+   <van-image width="2em" height="2em" src="/static/jlfj.png" />
+  <text>简历附件</text>
+ </view>
+ <view class="flex gap-sm column align-center items-center">
+   <van-image width="2em" height="2em" src="/static/wdtd.png" />
+  <text>我的投递</text>
+ </view>
+ <view class="flex gap-sm column align-center items-center">
+   <van-image width="2em" height="2em" src="/static/wdsc.png" />
+  <text>我的收藏</text>
+ </view>
+ <view class="flex gap-sm column align-center items-center">
+   <van-image width="2em" height="2em" src="/static/wyzqz.png" />
+  <text>我要找全职</text>
+ </view>
+</view>
+<view wx:for="{{menu}}" data-item="{{item}}" bindtap="handleClickMenuItem" wx:key="index" class="p-md flex justify-between">
+  <view class="flex gap-sm">
+    <van-icon name="{{item.icon}}"/>
+    <text>{{item.title}}</text>
+  </view>
+  <van-icon color="var(--secondary-color)" name="arrow"/>
+</view>

@@ -1,0 +1,7 @@
+<!--pages/sendProgress/index.wxml-->
+<view class="flex p-md gap-md justify-between items-center">
+  <view wx:for="{{tabs.tab}}" data-item="{{item}}" bindtap="handleTabChange" wx:key="index" class="tab {{tabs.activeId===item.id?'active':''}}">{{item.title}}</view>
+</view>
+<view class="px-md pb-md" wx:for="{{tabs.tab}}" wx:key="index" wx:if="{{tabs.activeId===item.id}}">
+  <van-empty image="/static/empty.png" description="没有更多数据哦～" />
+</view>

@@ -1,0 +1,17 @@
+<!--pages/setting/index.wxml-->
+<view class="p-md flex justify-between">
+  <text>打招呼设置</text>
+  <van-icon color="var(--secondary-color)" name="arrow"/>
+</view>
+<view class="p-md flex justify-between">
+  <text>更换手机号</text>
+  <van-icon color="var(--secondary-color)" name="arrow"/>
+</view>
+<view class="p-md flex justify-between">
+  <text>更改密码</text>
+  <van-icon color="var(--secondary-color)" name="arrow"/>
+</view>
+
+<view style="bottom: 50rpx;" bindtap="handleBack" class="p-md fixed w-full">
+  <van-button text-color="red" color="rgba(0,0,0,.07)" block round>退出登陆</van-button>
+</view>

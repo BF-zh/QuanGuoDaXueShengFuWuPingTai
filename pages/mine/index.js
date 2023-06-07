@@ -5,7 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    menu:[
+      {
+        title:"求职意向",
+        icon:"/static/qzyx.png",
+        url:"/pages/idea/index"
+      },
+      {
+        title:"我的协议",
+        icon:"/static/wdxy.png",
+        url:""
+      },
+      {
+        title:"实习评价",
+        icon:"/static/sxpj.png",
+        url:""
+      },
+      {
+        title:"问题反馈",
+        icon:"/static/wtfk.png",
+        url:""
+      },
+      {
+        title:"设置",
+        icon:"/static/setting.png",
+        url:"/pages/setting/index"
+      },
+    ]
   },
 
   /**
@@ -62,5 +88,16 @@ Page({
    */
   onShareAppMessage() {
 
+  },
+  handleClickMenuItem({currentTarget}){
+    const {item} = currentTarget.dataset
+    if(item.url){
+      wx.navigateTo({
+        url: item.url,
+        fail(){
+          console.log("跳转失败");
+        }
+      })
+    }
   }
 })
