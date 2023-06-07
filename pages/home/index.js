@@ -7,12 +7,6 @@ Page({
   data: {
     liveRoomList:[
       {
-        title:"易展翅525人才节",
-        src:"/static/521rcj.png",
-        time:"05-25 10:00",
-        count:"10.10万"
-      },
-      {
         title:"2023春招冲刺·运营行业急招",
         src:"/static/2023czcc.png",
         time:"04-12 19:00",
@@ -41,18 +35,6 @@ Page({
         src:"/static/zhktzxrc.jpeg",
         time:"03-10 09:30",
         count:"4.52万"
-      },
-      {
-        title:`2023春招进行时-有问必答`,
-        src:"/static/2023Spring.png",
-        time:"03-03 17:30",
-        count:"4765"
-      },
-      {
-        title:`2023春招进行时-热门岗位急招`,
-        src:"/static/2023Springing.jpeg",
-        time:"03-06 17:30",
-        count:"7187"
       },
     ],
     tabs:{

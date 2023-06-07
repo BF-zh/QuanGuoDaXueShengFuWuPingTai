@@ -9,7 +9,7 @@ Page({
       {
         title:"求职意向",
         icon:"/static/qzyx.png",
-        url:"/pages/idea/index"
+        url:"/subPages/idea/index"
       },
       {
         title:"我的协议",
@@ -29,7 +29,7 @@ Page({
       {
         title:"设置",
         icon:"/static/setting.png",
-        url:"/pages/setting/index"
+        url:"/subPages/setting/index"
       },
     ]
   },

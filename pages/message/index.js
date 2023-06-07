@@ -26,7 +26,7 @@ Page({
       {
         title:"投递进度",
         icon:"/static/tdjd.png",
-        url:"/pages/sendProgress/index"
+        url:"/subPages/sendProgress/index"
       },
       {
         title:"企业邀约",
